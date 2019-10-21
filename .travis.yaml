@@ -5,7 +5,10 @@ python:
   - 3.7
 
 install:
-  pip install pipenv && pipenv install --dev && pip install -e .
+  - pip install pipenv
+  - pipenv install --dev
+  - pip install -e .
 
 script:
-  pre-commit run --all-files && tests/test.sh
+  - pre-commit run --all-files
+  - tests/test.sh
