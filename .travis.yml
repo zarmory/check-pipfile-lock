@@ -1,9 +1,5 @@
 language: python
 
-python:
-  - "3.7"  # Should be first as this is a default
-  - "3.6"
-
 install:
   - pip install pipenv
   - pipenv install --dev
@@ -12,6 +8,11 @@ install:
 jobs:
   include:
     - stage: lint
-      script: pre-commit run --all-files
+    - script: pre-commit run --all-files
+      python: "3.7"
+
     - stage: test
       script: tests/test.sh
+      python: "3.6"
+    - script: tests/test.sh
+      python: "3.7"
