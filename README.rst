@@ -29,10 +29,10 @@ directory is assumed.
 Pre-commit hook
 ---------------
 Here is the configuration for
-`pre-commit <https://pre-commit.com/>`_ framework.::
+`pre-commit <https://pre-commit.com/>`_ framework.
 
-  .. code-block:: yaml
+.. code-block:: yaml
 
-    - repo: https://github.com/haizaar/check-pipfile-lock
-      hooks:
-        - id: check-pipfile-lock
+  - repo: https://github.com/haizaar/check-pipfile-lock
+    hooks:
+      - id: check-pipfile-lock
