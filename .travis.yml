@@ -6,7 +6,7 @@ python:
 
 install:
   - pip install pipenv
-  - pipenv install --dev
+  - pipenv install --system --dev
   - pip install -e .
 
 script:
