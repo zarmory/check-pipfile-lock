@@ -1,26 +1,17 @@
 language: python
 
 python:
+  - "3.7"  # Should be first as this is a default
   - "3.6"
-  - "3.7"
 
 install:
   - pip install pipenv
   - pipenv install --dev
   - pip install -e .
 
-env:
-  matrix:
-    - LINT=yes
-    - LINT=no
-
-script:
-  - if [[ "$LINT" == "yes" ]]; then pre-commit run --all-files; fi
-  - tests/test.sh
-
-matrix:
-  exclude:
-    - python: "3.6"
-      env: LINT=yes
-    - python: "3.7"
-      env: LINT=no
+jobs:
+  include:
+    - stage: lint
+      script: pre-commit run --all-files
+    - stage: test
+      script: tests/test.sh
