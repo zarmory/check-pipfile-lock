@@ -10,13 +10,7 @@ from pipenv.project import Project
 
 
 @click.command("check-pipfile-lock")
-@click.argument(
-    "pipfile_locks",
-    metavar="PATH-TO-PIPFILE-LOCK",
-    type=click.Path(exists=True),
-    nargs=-1,
-    required=False,
-)
+@click.argument("pipfile_locks", metavar="PATH-TO-PIPFILE-LOCK", type=click.Path(exists=True), nargs=-1, required=False)
 def main(pipfile_locks: List[str]):
     """
     Check whether specified Pipfile.lock file(s) are up to date with their Pipfile(s).
@@ -28,9 +22,7 @@ def main(pipfile_locks: List[str]):
     for pipfile_lock in pipfile_locks:
         pipfile_dir: Path = Path(pipfile_lock).parent
         if not check_dir(pipfile_dir):
-            cc.fatal_error(
-                f"{pipfile_lock} is out of date. Consider running 'pipenv lock'"
-            )
+            cc.fatal_error(f"{pipfile_lock} is out of date. Consider running 'pipenv lock'")
 
 
 def check_dir(dir_path: Optional[Path] = None) -> bool:
