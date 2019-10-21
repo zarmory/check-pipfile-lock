@@ -6,9 +6,21 @@ python:
 
 install:
   - pip install pipenv
-  - pipenv install --system --dev
+  - pipenv install --dev
   - pip install -e .
 
+env:
+  matrix:
+    - LINT=yes
+    - LINT=no
+
 script:
-  - pre-commit run --all-files
+  - if [[ "$LINT" == "yes" ]]; then pre-commit run --all-files; fi
   - tests/test.sh
+
+matrix:
+  exclude:
+    - python: "3.6"
+      env: LINT=yes
+    - python: "3.7"
+      env: LINT=no
