@@ -1,0 +1,7 @@
+---
+
+- id: check-pipfile-lock
+  name: "Check pipenv's Pipfile.lock to be consistent with Pipfile"
+  language: python
+  entry: check-pipfile-lock
+  files: Pipfile.lock

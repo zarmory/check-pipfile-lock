@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# envrc
+.envrc
+
+# Vim swap files
+.*.swp
