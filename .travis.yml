@@ -8,7 +8,7 @@ install:
 jobs:
   include:
     - stage: lint
-    - script: pre-commit run --all-files
+      script: pre-commit run --all-files
       python: "3.7"
 
     - stage: test
