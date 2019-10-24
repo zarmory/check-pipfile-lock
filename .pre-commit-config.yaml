@@ -42,3 +42,12 @@ repos:
     hooks:
       - id: check-pipfile-lock
         exclude: test
+  # For local development
+  - repo: local
+    hooks:
+      - id: check-pipfile-lock-dev
+        name: "Check pipenv's Pipfile.lock to be consistent with Pipfile"
+        language: python
+        exclude: test
+        entry: check-pipfile-lock
+        files: "(^|/){0,1}Pipfile(.lock){0,1}$"

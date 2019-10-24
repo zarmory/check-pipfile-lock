@@ -22,7 +22,7 @@ def main(pipfile_locks: List[str]):
     for pipfile_lock in pipfile_locks:
         pipfile_dir: Path = Path(pipfile_lock).parent
         if not check_dir(pipfile_dir):
-            cc.fatal_error(f"{pipfile_lock} is out of date. Consider running 'pipenv lock'")
+            cc.fatal_error(f"{pipfile_lock} is out of date. Consider running 'pipenv lock' or 'pipenv install'")
 
 
 def check_dir(dir_path: Optional[Path] = None) -> bool:
