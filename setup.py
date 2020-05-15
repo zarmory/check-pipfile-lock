@@ -2,10 +2,13 @@
 
 from setuptools import setup
 
-with open("README.rst") as f:
+LICENSE = "LICENSE"
+README = "README.rst"
+
+with open(README) as f:
     readme = f.read()
 
-with open("LICENSE") as f:
+with open(LICENSE) as f:
     license = f.read()
 
 setup(
@@ -29,4 +32,5 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     entry_points={"console_scripts": ("check-pipfile-lock=check_pipfile_lock:main",)},
+    data_files=[("", [LICENSE, README])],
 )
