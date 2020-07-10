@@ -13,7 +13,7 @@ with open(LICENSE) as f:
 
 setup(
     name="check-pipfile-lock",
-    version="0.0.4",
+    version="0.0.5",
     description="Check pipenv's Pipfile.lock to be consistent with Pipfile",
     long_description=readme,
     author="Zaar Hai",

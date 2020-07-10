@@ -34,7 +34,7 @@ Here is the configuration for
 .. code-block:: yaml
 
   - repo: https://github.com/haizaar/check-pipfile-lock
-    rev: v0.0.4
+    rev: v0.0.5
     hooks:
       - id: check-pipfile-lock
 
