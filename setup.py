@@ -30,6 +30,7 @@ setup(
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
     entry_points={"console_scripts": ("check-pipfile-lock=check_pipfile_lock:main",)},
     data_files=[("", [LICENSE, README])],

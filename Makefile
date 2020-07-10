@@ -17,3 +17,8 @@ restview:
 .PHONY: test
 test:
 	./tests/test.sh
+
+bootstrap:
+	pipenv install --dev
+	pipenv run pip install --upgrade -e .
+	pre-commit install

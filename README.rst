@@ -37,3 +37,11 @@ Here is the configuration for
     rev: v0.0.4
     hooks:
       - id: check-pipfile-lock
+
+Development
+-----------
+.. code-block:: shell
+
+  echo 'layout pipenv' > .envrc
+  direnv allow  # will take a while
+  make bootstrap
