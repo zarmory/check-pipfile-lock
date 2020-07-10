@@ -9,10 +9,12 @@ jobs:
   include:
     - stage: lint
       script: pre-commit run --all-files
-      python: "3.7"
+      python: "3.8"
 
     - stage: test
       script: tests/test.sh
       python: "3.6"
     - script: tests/test.sh
       python: "3.7"
+    - script: tests/test.sh
+      python: "3.8"
