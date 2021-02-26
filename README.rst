@@ -10,7 +10,7 @@ check-pipfile-lock
 .. image:: https://img.shields.io/pypi/dm/check-pipfile-lock.svg
     :target: https://pypi.python.org/pypi/check-pipfile-lock
 
-This package bridges gab in pipenv tooling by providing
+This package bridges gap in pipenv tooling by providing
 quick and easy way to check whether Pipfile.lock in question
 is consistent with the corresponding Pipfile without doing
 anything else.
